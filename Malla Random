@@ -1,0 +1,26 @@
+//cuadritos
+float guepa = 255;
+float he = 10;
+int gui =1;
+
+void setup(){
+  size(500,500);
+}
+
+void draw(){
+ guepa = guepa-1; 
+ if(guepa>255 || guepa<0){
+   guepa=guepa*100;
+ }
+ for(int uno =0; uno < height; uno=uno+25){
+   for(int dos =0; dos < width; dos=dos+25){
+   //stroke(random(0,255),random(0,255),210);
+   //line(0,uno,height,uno);
+   //line(dos,0,dos,width);
+    fill(random(0,255),random(0,255),random(0,255),guepa);
+    noStroke();
+    rect(uno,dos,25,25);
+ }
+
+ }
+}
